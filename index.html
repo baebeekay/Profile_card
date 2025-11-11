@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Amarachi Kalu Ndukwe - Profile Card</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <article data-testid="test-profile-card" class="profile-card">
+    <header>
+      <h2 data-testid="test-user-name" aria-label="User name">Amarachi Kalu Ndukwe</h2>
+    </header>
+
+    <figure>
+      <!-- Option 1: Local avatar.jpg (add your photo to /assets/) -->
+      <!-- <img data-testid="test-user-avatar" 
+           src="assets/avatar.jpg" 
+           alt="Amarachi Kalu Ndukwe's profile picture"> -->
+
+      <!-- Option 2: Placeholder avatar (uncomment if no local image) -->
+      <img data-testid="test-user-avatar" 
+           src="https://i.pravatar.cc/300?u=amarachi@kalundukwe.dev" 
+           alt="Amarachi Kalu Ndukwe's profile picture">
+
+      <figcaption>Full-Stack Engineer | Doing Hard Things</figcaption>
+    </figure>
+
+    <p data-testid="test-user-bio">
+      Full-stack engineer passionate about doing hard things in software development. 
+      From low-level C programming to DevOps automation, I build robust, scalable systems. 
+      Nigerian developer pushing boundaries one commit at a time.
+    </p>
+
+    <p data-testid="test-user-time" id="current-time"></p>
+
+    <nav data-testid="test-user-social-links" class="social-links" aria-label="Social media links">
+      <ul>
+        <li>
+          <a href="https://x.com/A_marachy" target="_blank" rel="noopener noreferrer" 
+             data-testid="test-user-social-twitter">
+            X/Twitter (@A_marachy)
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/baebeekay" target="_blank" rel="noopener noreferrer" 
+             data-testid="test-user-social-github">
+            GitHub (baebeekay)
+          </a>
+        </li>
+        <li>
+          <a href="https://www.linkedin.com/in/amarachikalue" target="_blank" rel="noopener noreferrer" 
+             data-testid="test-user-social-linkedin">
+            LinkedIn
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <section data-testid="test-user-hobbies">
+      <h3>Hobbies</h3>
+      <ul>
+        <li>Full-Stack Development</li>
+        <li>Low-Level Programming (C)</li>
+        <li>DevOps & System Engineering</li>
+        <li>Building Scalable Systems</li>
+      </ul>
+    </section>
+
+    <section data-testid="test-user-dislikes">
+      <h3>Dislikes</h3>
+      <ul>
+        <li>Easy Problems (I prefer hard things!)</li>
+        <li>Unoptimized Code</li>
+        <li>Non-Scalable Solutions</li>
+      </ul>
+    </section>
+  </article>
+
+  <script src="script.js"></script>
+</body>
+</html>
