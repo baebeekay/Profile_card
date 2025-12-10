@@ -101,3 +101,49 @@ body { background: #f0f2f5; display: flex; justify-content: center; padding: 2re
   .bio, .time, .list-section li { color: #bbb; }
   .social-links a { background: #2c2c2c; color: #e0e0e0; }
 }
+
+
+.nav-bar {
+  background: #fff;
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 0 2px 10px rgba(0,0,0,.1);
+  margin-bottom: 2rem;
+}
+.nav-bar a {
+  margin: 0 1rem;
+  text-decoration: none;
+  color: #6e8efb;
+  font-weight: 600;
+}
+.nav-bar a[aria-current="page"] {
+  color: #000;
+  border-bottom: 3px solid #6e8efb;
+}
+
+.page-header { text-align: center; margin: 2rem 0; }
+.page-header h1 { font-size: 2.2rem; color: #333; }
+
+.about-page, .contact-page { max-width: 800px; margin: 0 auto; padding: 1rem; }
+.about-page section, .contact-page form { margin-bottom: 3rem; }
+
+form { display: grid; gap: 1rem; }
+.form-group { display: grid; gap: .3rem; }
+label { font-weight: 600; }
+input, textarea { padding: .8rem; border: 1px solid #ccc; border-radius: .5rem; font: inherit; }
+input:focus, textarea:focus { outline: 2px solid #6e8efb; }
+
+.error { color: #d32f2f; font-size: .9rem; min-height: 1.2rem; }
+.success { color: #2e7d32; font-weight: 600; text-align: center; font-size: 1.1rem; }
+.hidden { display: none; }
+
+button {
+  background: #6e8efb;
+  color: white;
+  padding: 1rem;
+  border: none;
+  border-radius: .5rem;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+button:hover { background: #5a78d8; }
