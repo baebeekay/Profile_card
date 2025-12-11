@@ -1,16 +1,18 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Amarachi Kalu Ndukwe – Profile Card</title>
+  <title>Amarachi Kalu Ndukwe</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <!-- Shared Navigation -->
+  <div include-html="nav.html"></div>
+
   <article data-testid="test-profile-card" class="profile-card">
     <header class="card-header">
-      <h2 data-testid="test-user-name" aria-label="User name">Amarachi Kalu Ndukwe</h2>
+      <h2 data-testid="test-user-name">Amarachi Kalu Ndukwe</h2>
       <p class="location">NG</p>
     </header>
 
@@ -18,7 +20,7 @@
       <img data-testid="test-user-avatar"
            src="https://i.pravatar.cc/300?u=amarachi@kalundukwe.dev"
            alt="Amarachi Kalu Ndukwe profile picture">
-      <figcaption>Full-Stack Engineer | Doing Hard Things</figcaption>
+      <figcaption>Full-Stack & React Native Engineer</figcaption>
     </figure>
 
     <p data-testid="test-user-bio" class="bio">
@@ -31,41 +33,38 @@
 
     <nav data-testid="test-user-social-links" class="social-links" aria-label="Social media links">
       <ul>
-        <li>
-          <a href="https://x.com/A_marachy" target="_blank" rel="noopener noreferrer"
-             data-testid="test-user-social-twitter">X / Twitter (@A_marachy)</a>
-        </li>
-        <li>
-          <a href="https://github.com/baebeekay" target="_blank" rel="noopener noreferrer"
-             data-testid="test-user-social-github">GitHub (baebeekay)</a>
-        </li>
-        <li>
-          <a href="https://www.linkedin.com/in/amarachikalue" target="_blank" rel="noopener noreferrer"
-             data-testid="test-user-social-linkedin">LinkedIn</a>
-        </li>
+        <li><a href="https://x.com/A_marachy" target="_blank" rel="noopener noreferrer"
+               data-testid="test-user-social-twitter">X / Twitter (@A_marachy)</a></li>
+        <li><a href="https://github.com/baebeekay" target="_blank" rel="noopener noreferrer"
+               data-testid="test-user-social-github">GitHub (baebeekay)</a></li>
+        <li><a href="https://www.linkedin.com/in/amarachikalue" target="_blank" rel="noopener noreferrer"
+               data-testid="test-user-social-linkedin">LinkedIn</a></li>
       </ul>
     </nav>
 
     <section data-testid="test-user-hobbies" class="list-section">
       <h3>Hobbies</h3>
-      <ul>
-        <li>Full-Stack Development</li>
-        <li>Low-Level Programming (C)</li>
-        <li>DevOps & System Engineering</li>
-        <li>Building Scalable Systems</li>
-      </ul>
+      <ul><li>Full-Stack Development</li><li>Low-Level Programming (C)</li><li>DevOps & System Engineering</li><li>Building Scalable Systems</li></ul>
     </section>
 
     <section data-testid="test-user-dislikes" class="list-section">
       <h3>Dislikes</h3>
-      <ul>
-        <li>Easy Problems (I prefer hard things!)</li>
-        <li>Unoptimized Code</li>
-        <li>Non-Scalable Solutions</li>
-      </ul>
+      <ul><li>Easy Problems</li><li>Unoptimized Code</li><li>Non-Scalable Solutions</li></ul>
     </section>
   </article>
 
   <script src="script.js"></script>
+  <script>
+    // Load navigation + highlight current page
+    fetch('nav.html')
+      .then(r => r.text())
+      .then(html => {
+        document.querySelector('[include-html]').outerHTML = html;
+        const current = location.pathname.split('/').pop() || 'index.html';
+        document.querySelectorAll('.nav-link').forEach(link => {
+          if (link.getAttribute('href') === current) link.classList.add('active');
+        });
+      });
+  </script>
 </body>
 </html>
